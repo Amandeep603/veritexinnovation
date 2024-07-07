@@ -3,8 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 .cursive {
   font-family: "Cedarville Cursive", cursive;
 }
@@ -64,8 +62,51 @@
   display: none;
 }
 
-
-
 html {
   scroll-behavior: smooth;
+}
+
+
+#achievements {
+  background: #030014;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.achievement-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: scale(1.05);
+}
+
+.achievement-card img {
+  width: 100%;
+  height:auto;
+  border-bottom: 2px solid #2A0E61;
+}
+
+.achievement-card-content {
+  padding: 16px;
+  background: linear-gradient(135deg, #2a0e61, #3e1c71);
+  text-align: center;
+}
+
+.achievement-card-content h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.achievement-card-content p {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #ccc;
 }

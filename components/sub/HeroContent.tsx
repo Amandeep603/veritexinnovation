@@ -15,12 +15,12 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
+      className="flex flex-col lg:flex-row items-center justify-center px-20 mt-40 w-full z-[20]"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
+      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start lg:text-left">
         <motion.div
           variants={slideInFromTop}
-          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
+          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9] flex items-center"
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
@@ -38,7 +38,7 @@ const HeroContent = () => {
               {" "}
               the best{" "}
             </span>
-            project exprience
+            project experience
           </span>
         </motion.div>
 
@@ -46,8 +46,7 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          I&apos;m a Full Stack Software Engineer with experience in Website,
-          Mobile, and Software development. Check out my projects and skills.
+          "At Veritex Innovation Company, we revolutionize industries with our cutting-edge IoT and robotics solutions, crafting smart, automated systems that redefine innovation and efficiency. Experience the future of technology with our groundbreaking expertise and visionary approach."
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
@@ -59,13 +58,14 @@ const HeroContent = () => {
 
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center"
+        className="w-full h-full flex justify-center items-center mt-10 lg:mt-0"
       >
         <Image
-          src="/mainIconsdark.svg"
+          src="/robot.png"
           alt="work icons"
           height={650}
           width={650}
+          className="object-contain"
         />
       </motion.div>
     </motion.div>
