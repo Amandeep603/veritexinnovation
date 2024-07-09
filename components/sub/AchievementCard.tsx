@@ -27,7 +27,7 @@ const AchievementCard = ({ src, title, description }: Props) => {
       />
       <div className="relative p-4 bg-gradient-to-r from-purple-700 to-indigo-900">
         <h1 className="text-2xl font-semibold text-white">{title}</h1>
-        <p className="mt-2 text-gray-300">{description}</p>
+        {/* <p className="mt-2 text-gray-300">{description}</p> */}
       </div>
     </motion.div>
   );
