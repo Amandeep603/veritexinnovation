@@ -6,12 +6,12 @@ import styles from './TeamMember.module.css';
 
 interface TeamMemberProps {
   name: string;
-  role: string;
+  // role: string;
   expertise: string;
   imageSrc: string;
 }
 
-const TeamMember: React.FC<TeamMemberProps> = ({ name, role, expertise, imageSrc }) => {
+const TeamMember: React.FC<TeamMemberProps> = ({ name,/* role*/ expertise, imageSrc }) => {
   return (
     <motion.div
       className={styles.card}
@@ -28,7 +28,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, role, expertise, imageSrc
       />
       <p className={styles.heading}>{name}</p>
       <p>{expertise}</p>
-      <p>{role}</p>
+      {/* <p>{role}</p> */}
     </motion.div>
   );
 };

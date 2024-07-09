@@ -3,12 +3,12 @@ import React from "react";
 import TeamMember from "../main/TeamMember";
 
 const teamMembers = [
-  { name: "Rishabh Naithani", role: "Co-Founder", expertise: "Product Management", imageSrc: "/rishabh.jpg" },
-  { name: "Amandeep", role: "CTO", expertise: "Software Development", imageSrc: "/aman2.jpg" },
-  { name: "Prem", role: "CAD Designer", expertise: "CAD Modeling", imageSrc: "/prem.jpg" },
-  { name: "Arshad Mew", role: "Marketing Head", expertise: "Marketing Strategy", imageSrc: "/arshad3.jpg" },
-  { name: "Sushant Pandey", role: "UX/UI Designer", expertise: "User Experience Design", imageSrc: "/sushant3.jpg" },
-  { name: "Kashish Chopra", role: "Project Manager", expertise: "Project Coordination", imageSrc: "/aman2.jpg" },
+  { name: "Rishabh Naithani", /*role: "Co-Founder"*/ expertise: "Product Management", imageSrc: "/rishabh.jpg" },
+  { name: "Amandeep", /*role: "CTO"*/ expertise: "Software Development", imageSrc: "/aman2.jpg" },
+  { name: "Prem", /*role: "CAD Designer"*/ expertise: "CAD Modeling", imageSrc: "/prem.jpg" },
+  { name: "Arshad Mew", /*role: "Marketing Head"*/ expertise: "Marketing Strategy", imageSrc: "/arshad3.jpg" },
+  { name: "Sushant Pandey", /*role: "UX/UI Designer"*/ expertise: "User Experience Design", imageSrc: "/sushant3.jpg" },
+  { name: "Kashish Chopra",/*role: "Project Manager"*/ expertise: "Project Coordination", imageSrc: "/aman2.jpg" },
 ];
 
 const TeamGrid = () => {
