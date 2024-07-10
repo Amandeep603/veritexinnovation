@@ -111,4 +111,37 @@ h1 {
   color: #ccc;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #030014;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .flex-wrap {
+    flex-direction: column;
+  }
+
+  .max-w-sm {
+    max-width: 90%;
+    margin-bottom: 2rem;
+  }
+}
+
 
