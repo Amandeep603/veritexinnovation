@@ -81,17 +81,25 @@ export const Skill_data = [
   ];
   
   export const Socials = [
+    // {
+    //   name: "Discord",
+    //   src: "/instagram.svg",
+    // },
+    // {
+    //   name: "Facebook",
+    //   src: "/facebook.svg",
+    // },
+    // {
+    //   name: "Instagram",
+    //   src: "/discord.svg",
+    // },
     {
-      name: "Discord",
-      src: "/instagram.svg",
+      name: 'LinkedIn',
+      src: '/linkdin.png', // Update with your actual path
     },
     {
-      name: "Facebook",
-      src: "/facebook.svg",
-    },
-    {
-      name: "Instagram",
-      src: "/discord.svg",
+      name: 'Instagram',
+      src: '/instagram.svg', // Update with your actual path
     },
   ];
   
