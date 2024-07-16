@@ -1,0 +1,23 @@
+.navbar {
+    position: relative;
+}
+
+.navLink {
+    position: relative;
+}
+
+.navLink:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px black;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.navLink:hover:after {
+    transform: scaleX(1);
+}

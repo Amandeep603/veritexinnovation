@@ -1,46 +1,94 @@
-import Image from 'next/image'
-import React from 'react'
-import {Socials} from '@/constants'
+'use client';
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Navbar = () => {
-  return (
-    <div className='w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-10'>
-        <div className='w-full h-full flex flex-row items-center justify-between m-auto px-[10px]'>
-            <a href='#about-me' className='h-auto w-auto flex flex-row items-center'>
-                <Image 
-                    src="/VeritexLogo.png"
-                    alt="logo"
-                    width={70}
-                    height={70}
-                    className='cursor-pointer hover:animate-slowspin'
-                    />
+    const [isClick, setIsClick] = useState(false);
 
-                    <span className='font-bold ml-[10px] hidden md:block text-gray-300'>
-                        Veritex Innovations
-                    </span>
-            </a>
+    const toggleNavbar = () => {
+        setIsClick(!isClick);
+    };
 
-            <div className='w-[500px] h-full flex flex-row items-center justify-between md:mr-20'>
-                <div className='flex items-center justify-between w-full h-auto bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200'>
-                    <a href="#about-me" className='cursor-pointer'>About Us</a>
-                    <a href="#skills" className='cursor-pointer'>Skills</a>
-                    <a href="#projects" className='cursor-pointer'>Projects</a>
+    return (
+        <nav className='shadow-lg shadow-[#2A0E61]/50'>
+            <div className='max-w-full px-4 sm:px-6 bg-[#03001417] backdrop-blur-md lg:px-8'>
+                <div className='flex items-center justify-between h-16'>
+                    <div className='flex items-center'>
+                        <div className='flex-shrink-0'>
+                            <Link href="/" legacyBehavior>
+                                <a className='text-white flex items-center'>
+                                    <Image
+                                        src="/VeritexLogo.png" // Update the path to your logo
+                                        alt="Logo"
+                                        width={80}
+                                        height={80}
+                                    />
+                                    <span className='ml-2 text-xl font-bold'>Veritex Innovation</span>
+                                </a>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className='hidden md:block'>
+                        <div className='ml-4 flex items-center space-x-4'>
+                            <Link href="/" legacyBehavior>
+                                <a className='${styles.navLink} text-white rounded-lg px-3 py-2'>Home</a>
+                            </Link>
+                            <Link href="/about" legacyBehavior>
+                                <a className='${styles.navLink} text-white rounded-lg px-3 py-2'>About</a>
+                            </Link>
+                            <Link href="/services" legacyBehavior>
+                                <a className='${styles.navLink} text-white rounded-lg px-3 py-2'>Services</a>
+                            </Link>
+                            <Link href="/pricing" legacyBehavior>
+                                <a className='${styles.navLink} text-white rounded-lg px-3 py-2'>Pricing</a>
+                            </Link>
+                            <Link href="/contact" legacyBehavior>
+                                <a className='${styles.navLink} text-white rounded-lg px-3 py-2'>Contact</a>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className='md:hidden flex items-center'>
+                        <button
+                            className='inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'
+                            onClick={toggleNavbar}
+                        >
+                            {isClick ? (
+                                <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            ) : (
+                                <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                                </svg>
+                            )}
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div className='flex flex-row gap-5'>
-                {Socials.map((social) => (
-                    <Image 
-                        src={social.src}
-                        alt={social.name}
-                        key={social.name}
-                        width={24}
-                        height={24}
-                        />
-                ))}
-            </div>
-        </div>
-    </div>
-  );
+            {isClick && (
+                <div className='md:hidden'>
+                    <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
+                        <Link href="/" legacyBehavior>
+                            <a className='{styles.navLink} block text-white rounded-lg px-3 py-2'>Home</a>
+                        </Link>
+                        <Link href="/about" legacyBehavior>
+                            <a className='${styles.navLink} block text-white rounded-lg px-3 py-2'>About</a>
+                        </Link>
+                        <Link href="/services" legacyBehavior>
+                            <a className='${styles.navLink} block text-white rounded-lg px-3 py-2'>Services</a>
+                        </Link>
+                        <Link href="/pricing" legacyBehavior>
+                            <a className='${styles.navLink} block text-white rounded-lg px-3 py-2'>Pricing</a>
+                        </Link>
+                        <Link href="/contact" legacyBehavior>
+                            <a className='${styles.navLink} block text-white rounded-lg px-3 py-2'>Contact</a>
+                        </Link>
+                    </div>
+                </div>
+            )}
+        </nav>
+    );
 };
 
-export default Navbar
+export default Navbar;
