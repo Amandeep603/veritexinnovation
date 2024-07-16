@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -8,14 +8,14 @@ import {
 } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import Typewriter from 'typewriter-effect';
+import Typewriter from "typewriter-effect";
 
 const HeroContent = () => {
   return (
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center px-20 mt-30 w-full z-[20]"
+      className="flex flex-col lg:flex-row items-center justify-center px-10 lg:px-20 mt-40 lg:mt-30 w-full z-[20]"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
@@ -26,7 +26,7 @@ const HeroContent = () => {
           <h1 className="Welcome-text text-[13px]">
             <Typewriter
               options={{
-                strings: ['Veritex Innovation'],
+                strings: ["Veritex Innovation"],
                 autoStart: true,
                 loop: true,
               }}
@@ -42,7 +42,7 @@ const HeroContent = () => {
             Providing{" "}
             <Typewriter
               options={{
-                strings: ['the best'],
+                strings: ["the best"],
                 autoStart: true,
                 loop: true,
               }}
@@ -73,8 +73,8 @@ const HeroContent = () => {
         <Image
           src="/robo.png"
           alt="work icons"
-          height={650}
-          width={650}
+          height={550}
+          width={550}
         />
       </motion.div>
     </motion.div>
