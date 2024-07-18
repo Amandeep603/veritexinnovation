@@ -5,7 +5,7 @@ import {
   slideInFromLeft,
   slideInFromRight,
   slideInFromTop,
-} from "@/utils/motion";
+} from "../../utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
@@ -15,7 +15,7 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col lg:flex-row items-center justify-center px-10 lg:px-20 mt-40 lg:mt-30 w-full z-[20]"
+      className="flex flex-col lg:flex-row items-center justify-center px-10 lg:px-20 mt-20 lg:mt-30 w-full z-[20]"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
