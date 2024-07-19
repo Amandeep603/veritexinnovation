@@ -26,11 +26,11 @@ const services = [
 
 const Services = () => {
   return (
-    <section id='services' className='flex flex-col items-center justify-center py-20'>
-      <h2 className='text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20'>Our Services</h2>
-      <div className='flex flex-wrap justify-center gap-10'>
+    <section id='services' className='flex flex-col items-center justify-center py-20 z-40 relative cursor-pointer '>
+      <h2 className='text-[40px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20'>Our Services</h2>
+      <div className='flex flex-wrap justify-center gap-10 z-60 relative '>
         {services.map((service, index) => (
-          <div key={index} className='max-w-sm bg-gradient-to-r from-purple-500 to-cyan-500 shadow-lg rounded-lg overflow-hidden'>
+          <div key={index} className='max-w-sm bg-gradient-to-r from-purple-500 to-cyan-500 shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-110'>
             <Image
               src={service.image}
               alt={service.title}
@@ -39,8 +39,8 @@ const Services = () => {
               className='w-full h-48 object-cover'
             />
             <div className='p-6'>
-              <h3 className='text-2xl font-bold mb-2'>{service.title}</h3>
-              <p className='text-700'>{service.description}</p>
+              <h3 className='text-2xl font-bold mb-2 text-white'>{service.title}</h3>
+              <p className='text-white opacity-75'>{service.description}</p>
             </div>
           </div>
         ))}

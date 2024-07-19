@@ -14,7 +14,7 @@ interface TeamMemberProps {
 const TeamMember: React.FC<TeamMemberProps> = ({ name,/* role*/ expertise, imageSrc }) => {
   return (
     <motion.div
-      className={styles.card}
+      className={`${styles.card} z-50 relative`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}

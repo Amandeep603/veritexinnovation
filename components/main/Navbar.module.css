@@ -3,18 +3,18 @@
     position: relative;
 }
 
-.navLink:after {
+.navLink::after {
     display: block;
     content: '';
-    border-bottom: solid 3px black;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
+    border-bottom: solid 3px white !important;
+    transform: scaleX(0) !important;
+    transition: transform 250ms ease-in-out !important;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
 }
 
-.navLink:hover:after {
-    transform: scaleX(1);
+.navLink:hover::after {
+    transform: scaleX(1) !important;
 }

@@ -12,27 +12,27 @@ interface Props {
 
 const AchievementCard = ({ src, title, description }: Props) => {
   return (
-    <motion.div
-      className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] transform transition-transform duration-300 hover:scale-105"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <Image
-        src={src}
-        alt={title}
-        width={400}
-        height={300}
-        className="w-full h-[200px] object-cover"
-      />
-      <div className="relative p-4 bg-gradient-to-r from-purple-700 to-indigo-900">
-        <h1 className="text-2xl font-semibold text-white">{title}</h1>
-        {/* <p className="mt-2 text-gray-300">{description}</p> */}
-      </div>
-    </motion.div>
+    <div className="cursor-pointer transform transition-transform duration-300 hover:scale-110">
+      <motion.div
+        className=" relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] "
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Image
+          src={src}
+          alt={title}
+          width={400}
+          height={300}
+          className="w-full h-[200px] object-cover"
+        />
+        <div className="relative p-4 bg-gradient-to-r from-purple-700 to-indigo-900">
+          <h1 className="text-2xl font-semibold text-white">{title}</h1>
+          <p className="mt-2 text-gray-100 opacity-75">{description}</p>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 
 export default AchievementCard;
-
-
