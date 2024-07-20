@@ -12,7 +12,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className='shadow-lg shadow-[#2A0E61]/50'>
+        <nav className='shadow-sm shadow-[#2A0E61]/50 z-50 fixed w-full'>
             <div className='max-w-full px-4 sm:px-6 bg-[#03001417] backdrop-blur-md lg:px-8'>
                 <div className='flex items-center justify-between h-16'>
                     <div className='flex items-center'>
