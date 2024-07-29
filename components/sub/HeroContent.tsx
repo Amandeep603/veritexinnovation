@@ -9,7 +9,9 @@ import {
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
-
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls,Environment } from "@react-three/drei";
+import { Robot } from "../../components/sub/Robot";
 const HeroContent = () => {
   return (
     <motion.div
@@ -70,12 +72,14 @@ const HeroContent = () => {
         variants={slideInFromRight(0.8)}
         className="w-full h-full flex justify-center items-center"
       >
-        <Image
-          src="/robo.png"
-          alt="work icons"
-          height={550}
-          width={550}
-        />
+        <div style={{ width: '50vw', height: '80vh' }}>
+          <Canvas>
+            <OrbitControls/>
+            <Environment preset="sunset"/>
+            <ambientLight/>
+          <Robot position={[0,0,0]}/>
+          </Canvas>
+        </div>
       </motion.div>
     </motion.div>
   );
