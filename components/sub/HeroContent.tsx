@@ -11,7 +11,7 @@ import Image from "next/image";
 import Typewriter from "typewriter-effect";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls,Environment } from "@react-three/drei";
-import { Robot } from "../../components/sub/Robot";
+import { Robot } from "../../components/sub/robot";
 const HeroContent = () => {
   return (
     <motion.div
