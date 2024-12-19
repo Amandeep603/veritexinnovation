@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import {
   slideInFromLeft,
@@ -9,9 +9,27 @@ import {
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
-import { Canvas } from "@react-three/fiber";
+import { Canvas , useFrame} from "@react-three/fiber";
 import { OrbitControls,Environment } from "@react-three/drei";
 import { Robot } from "../../components/sub/robot";
+
+const RotatingRobot = ({ position } : any) => {
+  const robotRef = useRef() as any;
+
+  // Rotate the robot continuously
+  useFrame(() => {
+    if (robotRef.current) {
+      robotRef.current.rotation.y += 0.01 ; // Adjust rotation speed
+    }
+  });
+
+  return (
+    <group ref={robotRef} position={position as any} scale={[1.5, 1.5, 1.5]}>
+      <Robot />
+    </group>
+  );
+};
+
 const HeroContent = () => {
   return (
     <motion.div
@@ -40,8 +58,9 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.5)}
           className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
-          <span>
+          <span >
             Providing{" "}
+            <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-[#7042f8] via-[#8b42f8] to-[#d142f8]  font-bold glowing-shadow">
             <Typewriter
               options={{
                 strings: ["the best"],
@@ -49,6 +68,7 @@ const HeroContent = () => {
                 loop: true,
               }}
             />
+            </h1>
             {" "}
             project experience
           </span>
@@ -70,14 +90,18 @@ const HeroContent = () => {
 
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center"
+        className="w-full h-full flex justify-center items-center mt-10"
       >
-        <div style={{ width: '50vw', height: '80vh' }}>
-          <Canvas>
-            <OrbitControls/>
-            <Environment preset="sunset"/>
-            <ambientLight/>
-          <Robot position={[0,0,0]}/>
+       <div style={{ width: "50vw", height: "60vh" }}>
+          <Canvas camera={{ position: [0, 2, 5], fov: 50 }}>
+            {/* OrbitControls with zoom disabled */}
+            <OrbitControls enableZoom={false} />
+            {/* Environment lighting */}
+            <Environment preset="sunset" />
+            {/* Ambient light */}
+            <ambientLight intensity={0.5} />
+            {/* Rotating and scaled Robot model */}
+            <RotatingRobot position={[0, -1, 0]} />
           </Canvas>
         </div>
       </motion.div>

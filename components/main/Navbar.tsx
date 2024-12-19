@@ -12,8 +12,8 @@ const Navbar = () => {
     };
 
     return (
-        <nav className='shadow-sm shadow-[#2A0E61]/50 z-50 fixed w-full'>
-            <div className='max-w-full px-4 sm:px-6 bg-[#03001417] backdrop-blur-md lg:px-8'>
+        <nav className='shadow-sm bg-[#03001417] backdrop-blur-md shadow-[#2A0E61]/50 z-50 fixed w-[90%] mx-auto top-[10px] rounded-3xl  py-[8px] left-[5%]'>
+            <div className='max-w-full px-4 sm:px-6  lg:px-8'>
                 <div className='flex items-center justify-between h-16'>
                     <div className='flex items-center'>
                         <div className='flex-shrink-0'>

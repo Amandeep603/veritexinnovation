@@ -6,7 +6,7 @@ import Achievements from "../components/main/Achievements";
 
 export default function Home() {
   return (
-    <main className='h-full w-full'>
+    <main className='h-full w-full pt-[20px]'>
       <div className='flex flex-col gap=20'>
          <Hero />
          <Service />

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import StarsCanvas from "../components/main/StarBackground";
 import "@/components/main/TeamMember.module.css"
@@ -7,7 +7,7 @@ import Navbar from "../components/main/Navbar";
 import Footer from "../components/main/Footer";
 import styles from "@/components/main/Navbar.module.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Poppins({ subsets: ["latin"], weight : ["400" , "500" , "600", "700"] });
 
 export const metadata: Metadata = {
   title: "Veritex Innovation",
