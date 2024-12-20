@@ -46,7 +46,7 @@ const HeroContent = () => {
           <h1 className="Welcome-text text-[13px]">
             <Typewriter
               options={{
-                strings: ["Veritex Innovation"],
+                strings: ["Matrixhive Innovation"],
                 autoStart: true,
                 loop: true,
               }}

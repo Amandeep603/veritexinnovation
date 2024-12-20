@@ -27,9 +27,9 @@ const Footer = () => {
               height={50}
               className="mr-3"
             />
-            <div className="font-bold text-lg">Veritex Innovation Pvt. Ltd.</div>
+            <div className="font-bold text-lg">Matrixhive Innovation Pvt. Ltd.</div>
           </div>
-          <p className="text-sm">Email: veritexinnovation@gmail.com</p>
+          <p className="text-sm">Email: matrixhive.info@gmail.com</p>
           <p className="text-sm">Phone: +91 95011-38548</p>
           <p className="text-sm">Phone: +91 73475-36599</p>
         </div>
@@ -61,7 +61,7 @@ const Footer = () => {
 
       {/* Footer Bottom Section */}
       <div className="mt-6 text-center text-sm text-gray-400">
-        &copy; Veritex Innovation Company 2024 Inc. All rights reserved
+        &copy; Matrixhive Innovation Company 2024 Inc. All rights reserved
       </div>
     </div>
   );

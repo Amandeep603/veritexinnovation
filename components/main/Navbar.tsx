@@ -25,7 +25,7 @@ const Navbar = () => {
                                         width={80}
                                         height={80}
                                     />
-                                    <span className='ml-2 text-xl font-bold'>Veritex Innovation</span>
+                                    <span className='ml-2 text-xl font-bold'>Matrixhive Innovation</span>
                                 </a>
                             </Link>
                         </div>

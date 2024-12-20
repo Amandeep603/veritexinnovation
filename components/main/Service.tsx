@@ -70,7 +70,7 @@ const Services = () => {
           <motion.div
             key={index}
             variants={cardAnimation}
-            className="max-w-sm border-[0.3px] border-gray-600 border-t-none shadow-lg rounded-3xl overflow-hidden transform transition-transform duration-300 hover:scale-105"
+            className="max-w-sm border-[0.3px] border-gray-600 border-t-none shadow-lg rounded-3xl overflow-hidden transform transition-transform duration-300 hover:scale-110"
           >
             <Image
               src={service.image}
