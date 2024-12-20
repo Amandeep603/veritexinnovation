@@ -78,7 +78,7 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          At Veritex Innovation Company, we revolutionize industries with our cutting-edge IoT and robotics solutions, crafting smart, automated systems that redefine innovation and efficiency. Experience the future of technology with our groundbreaking expertise and visionary approach.
+          MatrixHive Innovation redefines industries with cutting-edge robotics and IoT solutions. We craft intelligent systems that enhance efficiency, connectivity, and everyday living. With innovation at our core, we build scalable technologies for a smarter, more connected future.
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
